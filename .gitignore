@@ -12,6 +12,11 @@ server/users.json
 web/node_modules/
 web/dist/
 
+# TypeScript 构建产物（tsc -b 生成）
+*.tsbuildinfo
+web/vite.config.js
+web/vite.config.d.ts
+
 # ---- Unity（若后续把完整 Unity 工程纳入本仓库）----
 [Ll]ibrary/
 [Tt]emp/
