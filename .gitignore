@@ -1,0 +1,28 @@
+# ---- Go ----
+server/ar-server.exe
+server/*.exe
+server/*.log
+server/*.tmp
+
+# 运行期生成的数据文件（首次启动自动初始化）
+server/data.json
+server/users.json
+
+# ---- Node / React ----
+web/node_modules/
+web/dist/
+
+# ---- Unity（若后续把完整 Unity 工程纳入本仓库）----
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+*.csproj
+*.sln
+*.user
+*.apk
+*.aab
+
+# ---- 系统 ----
+.DS_Store
+Thumbs.db

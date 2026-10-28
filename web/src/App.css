@@ -1,0 +1,432 @@
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 24px 48px;
+}
+
+.topbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #8a94a6;
+}
+
+/* 按钮 */
+.btn {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: #f5c2c0;
+  color: #b42318;
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background: #fdeceb;
+}
+
+.btn-danger {
+  background: #fff;
+  border-color: #f1b8b4;
+  color: #c62828;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #fdecea;
+}
+
+/* 错误横幅 */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.banner.error {
+  background: #fdeceb;
+  border: 1px solid #f5c2c0;
+  color: #b42318;
+}
+
+.banner.success {
+  background: #e8f7ee;
+  border: 1px solid #b7e6c5;
+  color: #15803d;
+}
+
+/* 统计卡片 */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.stat {
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #eef0f4;
+  border-left: 4px solid transparent;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.stat-blue { border-left-color: #2563eb; }
+.stat-red { border-left-color: #dc2626; }
+.stat-amber { border-left-color: #d97706; }
+.stat-green { border-left-color: #16a34a; }
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.stat-blue .stat-value { color: #2563eb; }
+.stat-red .stat-value { color: #dc2626; }
+.stat-amber .stat-value { color: #d97706; }
+.stat-green .stat-value { color: #16a34a; }
+
+.stat-label {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #8a94a6;
+}
+
+/* 工具栏 */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.search {
+  flex: 1;
+  padding: 9px 14px;
+  border: 1px solid #e2e5ea;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.search:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.filter-select {
+  padding: 9px 12px;
+  border: 1px solid #e2e5ea;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* 卡片 + 表格 */
+.card {
+  background: #fff;
+  border: 1px solid #eef0f4;
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.06);
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 13px 16px;
+  border-bottom: 1px solid #f0f2f5;
+  vertical-align: middle;
+}
+
+.table th {
+  background: #f9fafc;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8a94a6;
+  letter-spacing: 0.4px;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: #f6f8ff;
+}
+
+.th-right {
+  text-align: right;
+}
+
+.title {
+  font-weight: 600;
+  color: #1f2430;
+}
+
+.desc {
+  font-size: 13px;
+  color: #8a94a6;
+  margin-top: 3px;
+  max-width: 320px;
+}
+
+.pos {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 12px;
+  color: #5b6472;
+}
+
+.time {
+  font-size: 13px;
+  color: #8a94a6;
+  white-space: nowrap;
+}
+
+.reporter {
+  font-size: 13px;
+  color: #374151;
+  white-space: nowrap;
+}
+
+/* 优先级徽章 */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-low { background: #dcfce7; color: #15803d; }
+.badge-medium { background: #fef3c7; color: #b45309; }
+.badge-high { background: #fee2e2; color: #b91c1c; }
+
+/* 状态下拉（带状态色） */
+.status-select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.status-open { background: #fee2e2; border-color: #fecaca; color: #b91c1c; }
+.status-in_progress { background: #fef3c7; border-color: #fde68a; color: #b45309; }
+.status-resolved { background: #dcfce7; border-color: #bbf7d0; color: #15803d; }
+
+/* 空状态 / 加载 */
+.empty {
+  padding: 64px 24px;
+  text-align: center;
+  color: #8a94a6;
+}
+
+.empty-icon {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.empty-hint {
+  font-size: 13px;
+  color: #b0b7c3;
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 12px;
+  border: 3px solid #e2e5ea;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 640px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------------- 登录页 ---------------- */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  border: 1px solid #eef0f4;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(16, 24, 40, 0.08);
+  padding: 32px 28px;
+}
+
+.login-card h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.login-card .subtitle {
+  margin: 8px 0 20px;
+}
+
+.field {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.field span {
+  display: block;
+  font-size: 13px;
+  color: #5b6472;
+  margin-bottom: 6px;
+}
+
+.field .search {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-btn {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 16px;
+  font-size: 15px;
+}
+
+.login-hint {
+  margin: 18px 0 0;
+  font-size: 12px;
+  color: #9aa3b2;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ---------------- 顶栏用户区 ---------------- */
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #374151;
+}
+
+/* ---------------- 角色徽章 ---------------- */
+.role-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.role-admin { background: #dbeafe; color: #1d4ed8; }
+.role-inspector { background: #dcfce7; color: #15803d; }
+
+/* ---------------- 页签 ---------------- */
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eef0f4;
+}
+
+.tab {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.tab:hover {
+  color: #2563eb;
+}
+
+.tab.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+/* ---------------- 人员管理表单 ---------------- */
+.user-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px;
+  align-items: center;
+}
+
+.user-form .search {
+  flex: 1;
+  min-width: 120px;
+}
+
+.user-form .filter-select {
+  min-width: 110px;
+}
