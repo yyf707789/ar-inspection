@@ -1,6 +1,8 @@
 # Unity AR 移动端搭建步骤
 
-本目录提供了三个 C# 脚本，配合 AR Foundation 实现「检测水平平面 → 点击放置标记 → 填写并上报问题」。
+> 本目录已包含**完整的 Unity 工程源**（`Assets/`、`Packages/`、`ProjectSettings/`），可直接用 Unity Hub「打开」本 `unity/` 目录作为工程继续打包。下面是「从零新建」时的手动搭建说明。
+
+本工程实现「登录 → 检测水平平面 → 点击放置标记 → 填写并上报问题」，相关脚本在 `Assets/` 根目录：`UnityCompat.cs`、`ARPlacementController.cs`、`IssueReporter.cs`（登录 + 上报，网络请求用原始 Socket 实现）；另含 `Assets/Editor/ARSceneSetup.cs`（一键搭场景）和 `Assets/Plugins/Android/AndroidManifest.xml`（INTERNET 权限与明文放行）。
 
 ## 0. 版本要求
 
@@ -15,10 +17,11 @@
 ## 1. 新建项目
 
 1. Unity Hub → 新建 3D 项目，选择 Unity 2022.3 LTS。
-2. 把本目录的 `Assets/Scripts/` 三个脚本复制进项目的 `Assets/Scripts/`：
+2. 把本目录 `Assets/` 根目录下的三个脚本复制进项目的 `Assets/`：
    - `UnityCompat.cs`
    - `ARPlacementController.cs`
    - `IssueReporter.cs`
+   （可选：把 `Assets/Editor/` 与 `Assets/Plugins/Android/` 一并复制；前者提供「Tools → Auto-Build AR Scene」一键搭场景，后者是明文放行与 INTERNET 权限配置。）
 
 ## 2. 安装依赖包
 
